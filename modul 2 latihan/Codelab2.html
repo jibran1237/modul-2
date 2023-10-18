@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <style>
+      body {
+        background-color: #3498db;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      table {
+        width: 100%;
+      }
+
+      table,
+      th,
+      td {
+        border: none;
+      }
+
+      th {
+        background-color: #3498db;
+        color: #fff;
+        text-align: left;
+        padding: 8px;
+      }
+
+      td {
+        padding: 8px;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+
+      #btn-submit {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Form Pendaftaran</h1>
+      <form>
+        <div>
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Masukkan Nama Lengkap" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Masukkan Email" />
+        </div>
+        <div>
+          <label for="alamat">Alamat</label>
+          <input type="text" id="alamat" placeholder="Masukkan Alamat" />
+        </div>
+        <button id="btn-submit" onclick="validateForm()">Daftar</button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var alamat = document.getElementById("alamat").value;
+
+        if (nama === "" || email === "" || alamat === "") {
+          alert("Harap isi semua field!");
+        } else {
+          alert("Pendaftaran berhasil!");
+        }
+      }
+    </script>
+  </body>
+</html>
